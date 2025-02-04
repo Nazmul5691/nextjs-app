@@ -1,6 +1,6 @@
 
 
-const ServiceDetailsPage = ({params}) => {
+const ServiceDetailsPage =async ({params}) => {
 
     const data = [
         {
@@ -28,14 +28,23 @@ const ServiceDetailsPage = ({params}) => {
 
     const service = data.find((d) => d._id === id )
 
-    return (
-        <div>
-            <h1>ServiceDetailsPage</h1>
-            <p>Id : {id}</p>
-            <p>{service.service_name}</p>
-            <p>{service.service_description}</p>
-        </div>
-    );
+    if(service){
+        return (
+            <div>
+                <h1>ServiceDetailsPage</h1>
+                <p>Id : {id}</p>
+                <p>{service.service_name}</p>
+                <p>{service.service_description}</p>
+            </div>
+        );
+    }
+    else{
+        return(
+            <div>
+                <p>not found</p>
+            </div>
+        )
+    }
 };
 
 export default ServiceDetailsPage;
