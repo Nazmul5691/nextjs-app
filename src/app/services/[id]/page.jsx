@@ -35,6 +35,7 @@ const ServiceDetailsPage =async ({params}) => {
                 <p>Id : {id}</p>
                 <p>{service.service_name}</p>
                 <p>{service.service_description}</p>
+                <p>{service.service_description}</p>
             </div>
         );
     }
