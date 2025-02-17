@@ -42,6 +42,7 @@ const ServiceDetailsPage =async ({params}) => {
         return(
             <div>
                 <p>not found</p>
+                <p>not found</p>
             </div>
         )
     }
